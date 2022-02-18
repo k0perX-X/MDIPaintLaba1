@@ -9,10 +9,12 @@
     <NeutralLanguage>ru</NeutralLanguage>
     <AssemblyVersion>1.0</AssemblyVersion>
     <AssemblyName>MDIPaint</AssemblyName>
-    <Copyright>k0per</Copyright>
+    <Copyright>k0per https://github.com/k0perX-X</Copyright>
     <Description>Первая лабораторная работа</Description>
     <PackageProjectUrl>https://github.com/k0perX-X</PackageProjectUrl>
     <PackageIcon>3d_paint_folder_20524.png</PackageIcon>
+    <RepositoryUrl>https://github.com/k0perX-X/MDIPaintLaba1</RepositoryUrl>
+    <Authors>Перминов Николай</Authors>
   </PropertyGroup>
 
   <ItemGroup>
