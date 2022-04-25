@@ -26,9 +26,40 @@ namespace RGB
         private byte _g;
         private byte _b;
         private bool _isSaved = false;
+
+        private TextBox redTextBox = new TextBox();
+        private TextBox greenTextBox = new TextBox();
+        private TextBox blueTextBox = new TextBox();
+        public MainWindow()
+        {
+            redTextBox.Text = "0";
+            greenTextBox.Text = "0";
+            blueTextBox.Text = "0";
+            InitializeComponent();
+            redTextBox = redColorSetter.ColorTextBox;
+            greenTextBox = greenColorSetter.ColorTextBox;
+            blueTextBox = blueColorSetter.ColorTextBox;
+            _r = 0;
+            _g = 0;
+            _b = 0;
+            redTextBox.Tag = _r;
+            greenTextBox.Tag = _g;
+            blueTextBox.Tag = _b;
+            redTextBox.Text = _r.ToString();
+            greenTextBox.Text = _g.ToString();
+            blueTextBox.Text = _b.ToString();
+            RectangleFill();
+        }
+
         public MainWindow(byte r, byte g, byte b)
         {
+            redTextBox.Text = "0";
+            greenTextBox.Text = "0";
+            blueTextBox.Text = "0";
             InitializeComponent();
+            redTextBox = redColorSetter.ColorTextBox;
+            greenTextBox = greenColorSetter.ColorTextBox;
+            blueTextBox = blueColorSetter.ColorTextBox;
             _r = r;
             _g = g;
             _b = b;
