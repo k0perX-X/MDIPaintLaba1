@@ -93,7 +93,7 @@ namespace MDIPaintLaba1
 
         private void greenToolStripMenuItem_Click(object sender, EventArgs e)
         {
-            setupColor(Color.Green, sender);
+            setupColor(Color.FromArgb(0,255,0), sender);
         }
         private void blackToolStripMenuItem_Click(object sender, EventArgs e)
         {
@@ -107,9 +107,13 @@ namespace MDIPaintLaba1
 
         private void otherToolStripMenuItem_Click(object sender, EventArgs e)
         {
-            ColorDialog cd = new ColorDialog();
-            if (cd.ShowDialog() == DialogResult.OK)
-                setupColor(cd.Color, sender);
+            // LABA3
+            //ColorDialog cd = new ColorDialog();
+            //if (cd.ShowDialog() == DialogResult.OK)
+            //    setupColor(cd.Color, sender);
+            var f = new RGB.MainWindow(PenColor.R, PenColor.G, PenColor.B).ShowDialogRgb();
+            if (f.isSaved)
+                setupColor(Color.FromArgb(f.r, f.g, f.b), sender);
         }
 
         private void сохранитьToolStripMenuItem_Click(object sender, EventArgs e)
